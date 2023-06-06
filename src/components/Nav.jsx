@@ -31,14 +31,14 @@ const Nav = () => {
             <div className="sm:flex hidden">
                 {session?.user ? (
                     <div className="flex gap-3 md:gap-5">
-                        <Link href={"/create-prompt"} className="black_btn">
+                        <Link href={"/create-prompt"} className="black_btn orange_btn">
                             Create Post
                         </Link>
                         <button type="button" onClick={signOut} className="outline_btn">
                             Sign Out
                         </button>
                         <Link href={"/profile"}>
-                            <Image src={session?.user.image} width={37} height={37} className="rounded-full" alt="profile" ></Image>
+                            <Image src={session?.user.image} width={37} height={37} className="rounded-full hover:scale-105 duration-300" alt="profile" ></Image>
                         </Link>
                     </div>
                 ) : (
