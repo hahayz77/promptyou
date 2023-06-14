@@ -4,10 +4,7 @@ let isConnected = false // track connection status
 
 export const connectToDB = async () => {
     mongoose.set('strictQuery', true)
-    if (isConnected) {
-        console.log("Mongodb is connected")
-        return
-    }
+    if (isConnected) return console.log("Mongodb connected")
     try {
         await mongoose.connect(process.env.MONGODB_URI, {
             dbName: 'promptyou',
